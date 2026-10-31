@@ -19,6 +19,7 @@ EDIT: Change the design tokens below to quickly customize the colors and spacing
   --max: 1160px;
 }
 
+/* Establish consistent sizing and a small set of accessible global defaults. */
 * {
   box-sizing: border-box;
 }
@@ -46,6 +47,7 @@ button {
   font: inherit;
 }
 
+/* Shared page width, keyboard helpers, and screen-reader-only content. */
 .container {
   width: min(var(--max), calc(100% - 48px));
   margin-inline: auto;
@@ -77,6 +79,7 @@ button {
   border: 0;
 }
 
+/* Sticky brand and navigation shared by all three pages. */
 .site-header {
   height: 78px;
   border-bottom: 1px solid rgba(156, 178, 203, .1);
@@ -157,6 +160,7 @@ button {
   color: var(--text);
 }
 
+/* Home page introduction, actions, and portrait/code-card composition. */
 .hero {
   min-height: 0px;
   padding-top: 82px;
@@ -475,6 +479,7 @@ button {
   right: 30px;
 }
 
+/* Scrolling topic strip and reusable section headings and text links. */
 .ticker {
   border-block: 1px solid rgba(140, 168, 194, .13);
   overflow: hidden;
@@ -594,6 +599,7 @@ button {
   gap: 18px;
 }
 
+/* Project cards and their decorative dashboard previews. */
 .project-card {
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -955,6 +961,7 @@ button {
   font-size: 14px;
 }
 
+/* Contact call-to-action and the shared site footer. */
 .contact-band {
   padding: 76px 0;
   background: radial-gradient(ellipse at 16% 50%, rgba(43, 115, 128, .16), transparent 45%), #0d1624;
@@ -1050,14 +1057,9 @@ button {
   font-size: 15px;
 }
 
+/* Shared content cards and detailed project listings. */
 .page-content {
   padding: 56px 0 100px;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 44px;
 }
 
 .content-card {
@@ -1086,43 +1088,6 @@ button {
 
 .content-card li::marker {
   color: var(--cyan);
-}
-
-.timeline {
-  display: grid;
-  gap: 14px;
-}
-
-.timeline-item {
-  border-left: 1px solid #365165;
-  padding: 0 0 8px 20px;
-  position: relative;
-}
-
-.timeline-item:before {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--cyan);
-  left: -4px;
-  top: 7px;
-  box-shadow: 0 0 10px #62e6d277;
-}
-
-.timeline-item span {
-  font: 9px var(--mono);
-  color: var(--cyan);
-}
-
-.timeline-item h3 {
-  font-size: 14px;
-  margin: 4px 0;
-}
-
-.timeline-item p {
-  margin: 0;
 }
 
 .project-list {
@@ -1164,6 +1129,7 @@ button {
 }
 
 @media (max-width:900px) {
+  /* Reflow larger layouts for tablet-sized screens. */
   .hero {
     grid-template-columns: 1fr 0.82fr;
     gap: 0;
@@ -1193,6 +1159,7 @@ button {
 }
 
 @media (max-width:680px) {
+  /* Stack navigation and page content on narrow screens. */
   .container {
     width: min(var(--max), calc(100% - 36px));
   }
@@ -1404,11 +1371,6 @@ button {
     display: none;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
   .page-hero {
     padding: 59px 0 38px;
   }
@@ -1429,6 +1391,7 @@ button {
 }
 
 @media (prefers-reduced-motion:reduce) {
+  /* Respect operating-system requests to reduce animation. */
   *,
   *::before,
   *::after {
@@ -1957,34 +1920,6 @@ class="portrait-image". The image will sit behind the code panel. */
   }
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "story skills"
-    "story experience";
-  gap: 35px;
-  align-items: stretch;
-}
-
-.about-story {
-  grid-area: story;
-}
-
-.about-education {
-  grid-area: skills;
-}
-
-.about-experience {
-  grid-area: experience;
-}
-
-.education-block {
-  margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-}
-
 .project-art.art-dashboard {
   height: 228px;
   position: relative;
@@ -2016,6 +1951,7 @@ class="portrait-image". The image will sit behind the code panel. */
 .tidy-art > img {
   object-fit: contain;
   object-position: center;
+  padding: 16px;
 }
 
 .scriptle-art {
@@ -2031,45 +1967,59 @@ class="portrait-image". The image will sit behind the code panel. */
   object-position: center;
 }
 
-/* About page hero: single-photo carousel beside the introduction. */
+/* About page: personal introduction and centered photo carousel. */
 .about-page-hero {
-  padding: 48px 0 44px;
-  border-bottom: 1px solid var(--line);
-  background: radial-gradient(ellipse at 18% 0%, rgba(40, 119, 135, .13), transparent 42%);
+  padding: 62px 0 56px;
+  background: var(--bg);
 }
 
 .about-hero-layout {
   display: grid;
-  grid-template-columns: minmax(250px, .9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(260px, .68fr) minmax(0, 1.32fr);
   align-items: center;
-  gap: clamp(32px, 6vw, 76px);
+  gap: clamp(28px, 5vw, 64px);
 }
 
 .about-hero-copy h1 {
-  margin: 0 0 18px;
-  font-size: clamp(42px, 5.5vw, 40px);
-  line-height: 1.06;
-  letter-spacing: -.06em;
+  margin: 24px 0 20px;
+  font-size: clamp(42px, 5.2vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -.065em;
 }
 
 .about-hero-copy .eyebrow {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
-.about-hero-copy > p:last-child {
-  max-width: 560px;
+.about-accent-line {
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin-top: 22px;
+  background: var(--cyan);
+}
+
+.about-lede {
+  max-width: 34ch;
   color: #aab6c6;
   font-size: 15px;
+  line-height: 1.8;
 }
 
+/* Neighboring slides stay visible as previews while the active slide is centered. */
 .about-photo-carousel {
   width: 100%;
   min-width: 0;
 }
 
 .about-photo-track {
+  position: relative;
   overflow: hidden;
-  padding: 2px 1px 9px;
+  padding: 2px 0 8px;
+  border: 1px solid rgba(98, 230, 210, .34);
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .24);
   touch-action: pan-y;
   cursor: grab;
 }
@@ -2081,18 +2031,18 @@ class="portrait-image". The image will sit behind the code panel. */
 .about-photo-rail {
   display: flex;
   width: 100%;
-  gap: 0;
+  gap: 14px;
   will-change: transform;
-  transition: transform .42s cubic-bezier(.22, .68, 0, 1);
+  transition: transform .48s cubic-bezier(.22, .68, 0, 1);
 }
 
 .about-photo-slide {
   position: relative;
-  flex: 0 0 100%;
-  height: 360px;
+  flex: 0 0 82%;
+  height: 390px;
   overflow: hidden;
   margin: 0;
-  border: 1px solid rgba(111, 211, 211, .45);
+  border: 1px solid rgba(111, 211, 211, .38);
   border-radius: 10px;
   background: #101b29;
   box-shadow: 0 24px 70px rgba(0, 0, 0, .35);
@@ -2111,89 +2061,379 @@ class="portrait-image". The image will sit behind the code panel. */
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 34px 16px 13px;
+  padding: 42px 18px 14px;
   background: linear-gradient(transparent, rgba(5, 10, 18, .82));
   color: #f0f4fa;
   font-size: 12px;
 }
 
 .photo-slot-placeholder {
+  position: relative;
   display: flex;
   height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  border: 1px dashed rgba(98, 230, 210, .32);
-  color: #8393a8;
+  gap: 10px;
+  overflow: hidden;
+  padding: 24px;
+  color: #a6b7c9;
   font-size: 12px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(98, 230, 210, .17), transparent 54%),
+    linear-gradient(145deg, #111d2d, #0b1421 72%);
+}
+
+.photo-slot-placeholder::before,
+.photo-slot-placeholder::after {
+  position: absolute;
+  width: 52%;
+  height: 1px;
+  background: rgba(98, 230, 210, .22);
+  content: "";
+}
+
+.photo-slot-placeholder::before {
+  top: 34%;
+  left: -8%;
+  transform: rotate(-24deg);
+}
+
+.photo-slot-placeholder::after {
+  right: -8%;
+  bottom: 30%;
+  transform: rotate(-24deg);
+}
+
+.photo-slot-kicker {
+  color: var(--cyan);
+  font: 9px var(--mono);
+  letter-spacing: .15em;
 }
 
 .photo-slot-icon {
-  color: var(--cyan);
-  font-size: 24px;
-  line-height: 1;
-}
-
-.about-photo-controls {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  padding-top: 5px;
-}
-
-.photo-arrow {
   display: grid;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   place-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(98, 230, 210, .4);
   border-radius: 50%;
-  background: var(--surface);
+  color: var(--cyan);
+  font-size: 23px;
+}
+
+/* Arrow controls sit over the photo edges, matching the selected mockup. */
+.photo-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgba(98, 230, 210, .7);
+  border-radius: 50%;
+  background: rgba(8, 18, 29, .88);
   color: var(--text);
   font: inherit;
+  font-size: 22px;
   cursor: pointer;
-  transition: border-color .2s ease, color .2s ease, transform .2s ease;
+  transform: translateY(-50%);
+  transition: background .2s ease, color .2s ease, transform .2s ease;
 }
 
 .photo-arrow:hover {
-  border-color: var(--cyan);
-  color: var(--cyan);
-  transform: translateY(-1px);
+  background: var(--cyan);
+  color: #07131a;
+  transform: translateY(-50%) scale(1.04);
+}
+
+.photo-arrow-prev {
+  left: 7%;
+}
+
+.photo-arrow-next {
+  right: 7%;
+}
+
+/* Centered direct slide selectors let visitors choose any photo at a glance. */
+.about-photo-meta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 7px 2px 0;
+}
+
+.photo-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.photo-pagination button {
+  width: 38px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.photo-pagination button::before {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: #34465a;
+  content: "";
+  transition: background .2s ease, box-shadow .2s ease;
+}
+
+.photo-pagination button[aria-current="true"]::before,
+.photo-pagination button:hover::before {
+  background: var(--cyan);
+}
+
+.photo-pagination button[aria-current="true"]::before {
+  box-shadow: 0 0 12px rgba(98, 230, 210, .35);
+}
+
+/* Story section pairs the personal narrative with the portfolio's display style. */
+.about-story-section {
+  display: grid;
+  grid-template-columns: minmax(230px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(32px, 7vw, 92px);
+  align-items: start;
+}
+
+.about-section-heading h2,
+.about-personal-heading h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.08;
+  letter-spacing: -.05em;
+}
+
+.about-section-heading .eyebrow,
+.about-personal-heading .eyebrow {
+  margin-bottom: 16px;
+}
+
+.about-story-copy p,
+.about-personal-copy p {
+  margin: 0 0 18px;
+  color: #aab6c6;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.about-story-copy .about-direction {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 16px 18px;
+  border: 1px solid rgba(98, 230, 210, .18);
+  border-radius: 8px;
+  background: rgba(17, 28, 45, .68);
+  color: #d7e3ee;
+}
+
+.about-direction .signal {
+  flex: 0 0 6px;
+  margin-top: 8px;
+}
+
+/* Three work and project cards form a single row on wide screens. */
+.about-experience-section {
+  padding-top: 72px;
+}
+
+.about-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.about-experience-card {
+  min-width: 0;
+  min-height: 265px;
+  padding: 25px;
+  background: linear-gradient(145deg, rgba(17, 28, 45, .96), rgba(12, 20, 33, .96));
+}
+
+.about-experience-card .eyebrow {
+  margin-bottom: 24px;
+}
+
+.about-experience-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  letter-spacing: -.025em;
+}
+
+.about-experience-card p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.about-experience-card .experience-card-subtitle {
+  margin: 0 0 12px;
+  color: #d0d9e5;
+}
+
+.about-experience-card .experience-card-note {
+  margin-top: 18px;
+  color: var(--dim);
+  font-size: 10px;
+  font-style: italic;
+}
+
+.experience-placeholder-card {
+  border-style: dashed;
+  background: rgba(14, 22, 37, .56);
+}
+
+.photo-arrow:focus-visible,
+.photo-pagination button:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+/* Personal interests get a distinct close to the page, separate from career details. */
+.about-personal-section {
+  padding-top: 28px;
+}
+
+.about-personal-card {
+  display: grid;
+  grid-template-columns: minmax(230px, .82fr) minmax(0, 1.18fr);
+  gap: clamp(32px, 7vw, 86px);
+  align-items: center;
+  padding: clamp(25px, 5vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background:
+    radial-gradient(ellipse at 10% 100%, rgba(40, 119, 135, .13), transparent 45%),
+    var(--surface);
+}
+
+.about-interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.about-interest-list span {
+  padding: 6px 10px;
+  border: 1px solid #26384c;
+  border-radius: 5px;
+  background: rgba(8, 13, 24, .55);
+  color: #c2cedd;
 }
 
 @media (max-width: 900px) {
+  .about-hero-layout {
+    grid-template-columns: minmax(230px, .75fr) minmax(0, 1.25fr);
+    gap: 28px;
+  }
+
+  .about-hero-copy h1 {
+    font-size: clamp(36px, 5vw, 48px);
+  }
+
   .about-photo-slide {
-    height: 320px;
+    height: 330px;
+  }
+
+  .about-experience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experience-placeholder-card {
+    grid-column: 1 / -1;
   }
 }
 
 @media (max-width: 680px) {
   .about-page-hero {
-    padding: 37px 0 34px;
+    padding: 40px 0 36px;
   }
 
-  .about-hero-layout {
+  .about-hero-layout,
+  .about-story-section,
+  .about-personal-card {
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .about-hero-copy {
-    order: 1;
-  }
-
-  .about-photo-carousel {
-    order: 2;
-    max-width: 440px;
-    margin: 0 auto;
+    gap: 28px;
   }
 
   .about-hero-copy h1 {
-    font-size: clamp(34px, 9vw, 45px);
+    margin-top: 18px;
+    font-size: clamp(39px, 11vw, 55px);
+  }
+
+  .about-lede {
+    max-width: 42ch;
+  }
+
+  .about-photo-carousel {
+    margin: 0 -8px;
   }
 
   .about-photo-slide {
-    height: 300px;
+    flex-basis: 84%;
+    height: 290px;
+  }
+
+  .photo-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .photo-arrow-prev {
+    left: 5%;
+  }
+
+  .photo-arrow-next {
+    right: 5%;
+  }
+
+  .about-photo-meta {
+    gap: 9px;
+  }
+
+  .photo-pagination {
+    gap: 4px;
+  }
+
+  .photo-pagination button {
+    width: 27px;
+  }
+
+  .about-story-section {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .about-experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-placeholder-card {
+    grid-column: auto;
+  }
+
+  .about-experience-card {
+    min-height: 0;
+  }
+
+  .about-personal-section {
+    padding-top: 10px;
   }
 }
 

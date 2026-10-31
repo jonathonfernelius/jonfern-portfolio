@@ -1,66 +1,161 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080d18">
-  <meta name="description" content="Learn about Your Name, an information systems student. — EDIT"><title>About | Your Name</title>
-  <link rel="stylesheet" href="../styles/style.css"><script src="../scripts/main.js" defer></script>
-</head>
-<body><a class="skip-link" href="#main">Skip to content</a>
-<!-- Header -->
-<header class="site-header">
-    <div class="container nav-wrap">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080d18">
+    <meta name="description" content="Meet Jonathon A. Fernelius: an information systems student, lifelong learner, and people-first problem solver.">
+    <title>About | Jonathon A. Fernelius</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/main.js" defer>
+    </script>
+    <link rel="icon" href="../images/jaf-logo.png">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Shared site header with links to the main portfolio pages. -->
+    <header class="site-header">
+      <div class="container nav-wrap">
         <!-- Logo and name -->
-        <a class="brand" href="../index.html" aria-label="Jonathon A. Fernelius home"><span class="brand-mark"><img src="../images/jaf-logo.png" alt="jaf"></span><span class="brand-name">Jonathon A. Fernelius<span class="brand-dot">.</span></span></a>
+        <a class="brand" href="../index.html" aria-label="Jonathon A. Fernelius home">
+          <span class="brand-mark">
+            <img src="../images/jaf-logo.png" alt="jaf">
+          </span>
+          <span class="brand-name">Jonathon A. Fernelius<span class="brand-dot">.</span></span>
+        </a>
         <!-- Navigation bar -->
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
         <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
-        <a class="active" href="../index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
-        <a class="nav-contact" href="../index.html#contact">Let's connect <span aria-hidden="true">↗</span></a>
+          <a href="../index.html">Home</a>
+          <a class="active" href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a class="nav-contact" href="../index.html#contact">Let's connect <span aria-hidden="true">↗</span></a>
         </nav>
-    </div>
-</header>
+      </div>
+    </header>
+    <main id="main">
+      <!-- Lead with a short personal introduction and a browsable photo carousel. -->
+      <section class="about-page-hero">
+        <div class="container about-hero-layout">
+          <div class="about-hero-copy">
+            <p class="eyebrow">ABOUT / THE PERSON BEHIND THE PROJECTS</p>
+            <span class="about-accent-line" aria-hidden="true"></span>
+            <h1>Who is<br>Jonathon A.<br><span class="gradient-text">Fernelius?</span></h1>
+            <p class="about-lede">I’m an information systems student at BYU, a lifelong learner, and someone who loves bringing people and technology together to solve useful problems.</p>
+          </div>
 
-<main id="main">
-<section class="about-page-hero">
-  <div class="container about-hero-layout">
-    <div class="about-hero-copy">
-      <p class="eyebrow">ABOUT / THE PERSON BEHIND THE PROJECTS</p>
-      <h1>Who is <br><span class="gradient-text">Jonathon A. <br>Fernelius?</span></h1>
-      <p><!-- EDIT: Write a short, specific introduction about your interests and what kind of role you want. -->I’m Your Name, an information systems student interested in how technology can make work clearer, faster, and more useful for people.</p>
-    </div>
-    <!-- ABOUT PHOTO CAROUSEL: Replace the photo slots with your own images.
-         Put image files in ../images/ and update the src and alt text. -->
-    <div class="about-photo-carousel" data-photo-carousel aria-label="Photos of Jonathon">
-      <div class="about-photo-track" data-photo-track tabindex="0" aria-label="Photo carousel">
-        <div class="about-photo-rail" data-photo-rail>
-          <figure class="about-photo-slide">
-            <img src="../images/professional-picture.jpg" alt="Portrait of Jonathon A. Fernelius">
-            <figcaption>Me, outside the projects</figcaption>
-          </figure>
-          <!-- PHOTO SLOT: Duplicate this figure for each photo you add. -->
-          <figure class="about-photo-slide photo-slot">
-            <div class="photo-slot-placeholder"><span class="photo-slot-icon" aria-hidden="true">＋</span><span>Add another photo</span></div>
-          </figure>
-          <!-- PHOTO SLOT: Duplicate this figure for each photo you add. -->
-          <figure class="about-photo-slide photo-slot">
-            <div class="photo-slot-placeholder"><span class="photo-slot-icon" aria-hidden="true">＋</span><span>Add another photo</span></div>
-          </figure>
+          <!-- Replace the labeled photo slots with your own images in ../images/. -->
+          <div class="about-photo-carousel" data-photo-carousel aria-label="Photo carousel">
+            <div class="about-photo-track" data-photo-track tabindex="0" aria-label="Photos of Jonathon. Use the arrow keys to browse.">
+              <div class="about-photo-rail" data-photo-rail>
+                <figure class="about-photo-slide">
+                  <img src="../images/professional-picture.jpg" alt="Portrait of Jonathon A. Fernelius">
+                  <figcaption>Me, outside the projects</figcaption>
+                </figure>
+                <figure class="about-photo-slide photo-slot">
+                  <div class="photo-slot-placeholder photo-slot-home">
+                    <span class="photo-slot-kicker">PHOTO 02</span>
+                    <span class="photo-slot-icon" aria-hidden="true">＋</span>
+                    <span>Add a photo from a place you love</span>
+                  </div>
+                </figure>
+                <figure class="about-photo-slide photo-slot">
+                  <div class="photo-slot-placeholder photo-slot-interests">
+                    <span class="photo-slot-kicker">PHOTO 03</span>
+                    <span class="photo-slot-icon" aria-hidden="true">＋</span>
+                    <span>Add a photo from life outside school</span>
+                  </div>
+                </figure>
+              </div>
+              <button class="photo-arrow photo-arrow-prev" type="button" data-photo-prev aria-label="Show previous photo">←</button>
+              <button class="photo-arrow photo-arrow-next" type="button" data-photo-next aria-label="Show next photo">→</button>
+            </div>
+            <div class="about-photo-meta">
+              <div class="photo-pagination" data-photo-pagination role="group" aria-label="Choose a photo"></div>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- A short origin story explains the people-first motivation behind the work. -->
+      <section class="section container about-story-section">
+        <div class="about-section-heading">
+          <p class="eyebrow">01 / MY STORY</p>
+          <h2>People first.<br><span class="gradient-text">Purpose always.</span></h2>
+        </div>
+        <div class="about-story-copy">
+          <p>I grew up in rural Utah and first fell in love with programming by making things that could help someone. Later, serving a mission introduced me to people and perspectives from different backgrounds. That experience helped me see how much I enjoy listening, learning, and working alongside others.</p>
+          <p>Information systems feels like a natural meeting point for those interests. I get to understand a real need, think through the process behind it, and help shape technology that makes the experience better for people.</p>
+          <p class="about-direction"><span class="signal"></span> I’m especially curious about product management and the possibility of teaching information systems in the future.</p>
+        </div>
+      </section>
+
+      <!-- Experience cards keep the work section easy to scan and update. -->
+      <section class="section about-experience-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 / EXPERIENCE</p>
+              <h2>Work, collaboration, <span class="muted-heading">and learning.</span></h2>
+            </div>
+          </div>
+          <div class="about-experience-grid">
+            <article class="content-card about-experience-card">
+              <p class="eyebrow">WORK EXPERIENCE</p>
+              <h3>FSY Conferences</h3>
+              <p class="experience-card-subtitle">For the Strength of Youth</p>
+              <p>I’m glad to have been part of FSY Conferences. Add your exact title, dates, and a short description of your responsibilities and contributions here.</p>
+              <p class="experience-card-note">Starter copy — edit with your role and impact.</p>
+            </article>
+
+            <article class="content-card about-experience-card">
+              <p class="eyebrow">TEAM PROJECT</p>
+              <h3>Coursewise</h3>
+              <p class="experience-card-subtitle">Student task manager</p>
+              <p>With a team, I’m helping build a tool that brings student assignments into one place. Add your specific contribution, technologies, and the project outcome here.</p>
+              <p class="experience-card-note">Starter copy — make your part of the work clear.</p>
+            </article>
+
+            <article class="content-card about-experience-card experience-placeholder-card">
+              <p class="eyebrow">ADD AN EXPERIENCE</p>
+              <h3>Another role or project</h3>
+              <p class="experience-card-subtitle">[Organization or project name]</p>
+              <p>Use this space for another job, internship, campus role, volunteer experience, or project you want people to know about.</p>
+              <p class="experience-card-note">Add dates, what you did, and what changed because of your work.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal interests show the person behind the academic and technical work. -->
+      <section class="section container about-personal-section">
+        <div class="about-personal-card">
+          <div class="about-personal-heading">
+            <p class="eyebrow">03 / OUTSIDE THE CLASSROOM</p>
+            <h2>Curiosity doesn’t<br><span class="gradient-text">clock out.</span></h2>
+          </div>
+          <div class="about-personal-copy">
+            <p>When I’m away from school and a screen, I’m usually reading, writing creatively, playing video games, or spending time with friends. I also love the Thai language and culture, and I’m always happy to learn something new about them.</p>
+            <p>Those parts of my life keep me curious and remind me that there’s always a person, a story, or a different point of view behind the problem in front of me.</p>
+            <div class="about-interest-list" aria-label="Personal interests">
+              <span>Reading</span><span>Creative writing</span><span>Video games</span><span>Thai language &amp; culture</span><span>Time with friends</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          Designed &amp; built in collaboration with AI <span>✳</span>
+        </p>
       </div>
-      <div class="about-photo-controls">
-        <button class="photo-arrow" type="button" data-photo-prev aria-label="Previous photo">←</button>
-        <button class="photo-arrow" type="button" data-photo-next aria-label="Next photo">→</button>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="page-content container"><div class="about-grid">
-<article class="content-card about-story"><p class="eyebrow">MY STORY</p><h2>People, process, and technology</h2><p>I was born and raised in rural Utah, where I came to love computer programming and building things that can help other people. It wasn't until my mission for the Church of Jesus Christ of Latter-day Saints that I came to have a deep and abiding love for meeting and working with people. Since then, information systems seemed like the natural fit to combine my love of creating technological solutions with the ability to interact with people from a wide range of places and backgrounds.</p><p>Currently my hope is to one day be either a product manager or a professor teachng the next generation about information systems.</p></article>
-<article class="content-card about-education"><p class="eyebrow">EDUCATION</p><h2>Bachelor of Science: Information Systems</h2><div class="timeline"><div class="timeline-item"><span>2025 — 2028</span><h3>Brigham Young University</h3><p><!-- EDIT: Degree, expected graduation, relevant focus, honors. -->B.S. in Information Systems · Expected [Month Year]<br>Relevant coursework: [Course], [Course], [Course]</p></div></div></article>
-<article class="content-card about-experience"><p class="eyebrow">EXPERIENCE</p><h2>Experience &amp; involvement</h2><div class="timeline"><div class="timeline-item"><span>[DATES]</span><h3>[Role or organization]</h3><p><!-- EDIT: Add a job, internship, campus organization, or meaningful volunteer experience. -->[One sentence about your impact, responsibility, or what you learned.]</p></div><div class="timeline-item"><span>[DATES]</span><h3>[Another role or activity]</h3><p>[Add a second experience or remove this timeline item.]</p></div></div></article></div>
-<div style="margin-top:22px" class="content-card"><p class="eyebrow">OUTSIDE THE CLASSROOM</p><h2>Curiosity doesn’t clock out.</h2><p>Away from a screen, I enjoy reading, creative writing, playing video games, and hanging out with friends. I also have a deep love for the Thai language and culture! These interests remind me to stay curious and bring fresh perspectives to my work.</p></div>
-</section></main>
-<!-- Footer -->
-<footer class="site-footer"><div class="container footer-inner"><p>Designed &amp; built with AI <span>✳</span></p></div></footer>
-</body>
+    </footer>
+  </body>
 </html>
